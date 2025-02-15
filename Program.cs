@@ -8,8 +8,10 @@ class Program
         ClientManager clientMgr = new ClientManager();
         Console.WriteLine(">>>>>>>>>>> Welcome! <<<<<<<<<<<");
         string? userInput = "";
-        while (userInput != "q")
+        while (true)
         {
+            ShowMainMenu();
+            userInput = Console.ReadLine();
             switch (userInput)
             {
                 case "1":
@@ -26,8 +28,6 @@ class Program
                     Console.WriteLine("I do not understand your input. Please retry.");
                     break;
             }
-            ShowMainMenu();
-            userInput = Console.ReadLine();
         }
     }
 
